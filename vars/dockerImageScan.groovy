@@ -1,4 +1,4 @@
-def call(String hubUser, String AppName, String ImageTag,){
+def call(String hubUser, String AppName, String ImageTag){
     
      sh """   
       trivy image ${hubUser}/${AppName}:latest > scan.txt
