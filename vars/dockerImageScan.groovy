@@ -1,11 +1,13 @@
-// def call(String project, String ImageTag, String hubUser){
+def call(String hubUser, String AppName, String ImageTag,){
     
-//     sh """   
-//      trivy image ${hubUser}/${project}:latest > scan.txt
-//      cat scan.txt
-//     """
-// }
+     sh """   
+      trivy image ${hubUser}/${AppName}:latest > scan.txt
+      cat scan.txt
+     """
+}
 
+
+/*
 def call(String aws_account_id, String region, String ecr_repoName){
     
     sh """
@@ -13,3 +15,4 @@ def call(String aws_account_id, String region, String ecr_repoName){
     cat scan.txt
     """
 }
+*/
